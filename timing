@@ -1,0 +1,6 @@
+public class Main {
+  public static void main(String[] args) {
+    String txt = "everything is made for a reason";
+    System.out.println("The length of the txt string is: " + txt.length());
+  }
+}
