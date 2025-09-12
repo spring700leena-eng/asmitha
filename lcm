@@ -1,0 +1,24 @@
+public class LCMCalculator {
+    public static void main(String[] args) {
+        int num1 = 12, num2 = 18; // Example numbers
+        int lcm = findLCM(num1, num2);
+
+        System.out.println("The LCM of " + num1 + " and " + num2 + " is: " + lcm);
+    }
+
+    // Method to calculate LCM
+    public static int findLCM(int a, int b) {
+        int gcd = findGCD(a, b); // Find GCD first
+        return (a * b) / gcd;    // LCM formula: (a * b) / GCD
+    }
+
+    // Method to calculate GCD using the Euclidean algorithm
+    public static int findGCD(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+}
